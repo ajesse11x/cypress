@@ -18,7 +18,9 @@
     "lint-ts": "tslint --project . --fix --format stylish lib/*.ts lib/**/*.ts",
     "format-ts": "prettier --no-semi --single-quote --write lib/*.ts lib/**/*.ts",
     "build-js": "tsc",
-    "size": "t=\"$(npm pack .)\"; wc -c \"${t}\"; tar tvf \"${t}\"; rm \"${t}\";"
+    "size": "t=\"$(npm pack .)\"; wc -c \"${t}\"; tar tvf \"${t}\"; rm \"${t}\";",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "files": [
     "lib"
@@ -53,6 +55,8 @@
     "lodash": "^4.11.1",
     "plist": "^2.1.0",
     "pluralize": "^7.0.0",
-    "ramda": "^0.24.1"
-  }
+    "ramda": "^0.24.1",
+    "snyk": "^1.189.0"
+  },
+  "snyk": true
 }
