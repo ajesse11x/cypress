@@ -23,7 +23,9 @@
     "build": "node ./scripts/build.js",
     "prerelease": "npm run build",
     "release": "cd build && releaser --no-node --no-changelog",
-    "size": "t=\"$(npm pack .)\"; wc -c \"${t}\"; tar tvf \"${t}\"; rm \"${t}\";"
+    "size": "t=\"$(npm pack .)\"; wc -c \"${t}\"; tar tvf \"${t}\"; rm \"${t}\";",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "nyc": {
     "exclude": [
@@ -72,7 +74,8 @@
     "supports-color": "5.1.0",
     "tmp": "0.0.31",
     "url": "0.11.0",
-    "yauzl": "2.8.0"
+    "yauzl": "2.8.0",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "@cypress/releaser": "0.2.2",
@@ -100,5 +103,6 @@
     "lib",
     "index.js",
     "types/*.d.ts"
-  ]
+  ],
+  "snyk": true
 }
