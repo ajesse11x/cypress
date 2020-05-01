@@ -8,7 +8,9 @@
     "clean-deps": "rm -rf node_modules",
     "test": "cross-env NODE_ENV=test bin-up mocha --reporter mocha-multi-reporters --reporter-options configFile=../../mocha-reporter-config.json",
     "test-watch": "cross-env NODE_ENV=test bin-up mocha --watch",
-    "https": "node https.js"
+    "https": "node https.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "files": [
     "lib"
@@ -35,6 +37,8 @@
     "node-forge": "^0.6.39",
     "semaphore": "^1.0.5",
     "server-destroy-vvo": "1.0.1",
-    "ssl-root-cas": "^1.1.10"
-  }
+    "ssl-root-cas": "^1.1.10",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
