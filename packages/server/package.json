@@ -22,7 +22,9 @@
     "test-debug": "NODE_ENV=test NODE_DEBUG=request CYPRESS_ENV=test BLUEBIRD_DEBUG=1 DEBUG=nock.*,-nock.common,socket.io:* node --inspect --debug-brk ./node_modules/.bin/_mocha --opts test/support/mocha.opts --watch",
     "codecov": "codecov",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
-    "lint": "bin-up coffeelint test/*.coffee test/unit/*.coffee test/integration/*.coffee"
+    "lint": "bin-up coffeelint test/*.coffee test/unit/*.coffee test/integration/*.coffee",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "files": [
     "config",
@@ -176,6 +178,8 @@
     "underscore.string": "3.3.4",
     "url-parse": "^1.1.7",
     "widest-line": "^2.0.0",
-    "winston": "^0.9.0"
-  }
+    "winston": "^0.9.0",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
