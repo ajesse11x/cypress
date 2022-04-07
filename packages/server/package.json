@@ -113,11 +113,11 @@
     "find-process": "^1.1.1",
     "fluent-ffmpeg": "^2.1.0",
     "fs-extra": "4.0.3",
-    "getos": "^2.8.2",
+    "getos": "^3.1.2",
     "glob": "7.1.2",
     "graceful-fs": "^4.1.11",
     "gulp-util": "^3.0.6",
-    "hbs": "4.0.0",
+    "hbs": "4.0.1",
     "http-accept": "^0.1.6",
     "http-proxy": "1.17.0",
     "http-status-codes": "^1.0.6",
@@ -176,6 +176,6 @@
     "underscore.string": "3.3.4",
     "url-parse": "^1.1.7",
     "widest-line": "^2.0.0",
-    "winston": "^0.9.0"
+    "winston": "^3.3.0"
   }
 }
