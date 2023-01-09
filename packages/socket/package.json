@@ -13,8 +13,8 @@
     "lib"
   ],
   "dependencies": {
-    "socket.io": "1.7.4",
-    "socket.io-client": "1.7.4"
+    "socket.io": "2.1.0",
+    "socket.io-client": "2.1.0"
   },
   "devDependencies": {
     "@cypress/releaser": "0.1.12",
