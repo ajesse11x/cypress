@@ -22,7 +22,9 @@
     "test-debug": "NODE_ENV=test NODE_DEBUG=request CYPRESS_ENV=test BLUEBIRD_DEBUG=1 DEBUG=nock.*,-nock.common,socket.io:* node --inspect --debug-brk ./node_modules/.bin/_mocha --opts test/support/mocha.opts --watch",
     "codecov": "codecov",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
-    "lint": "bin-up coffeelint test/*.coffee test/unit/*.coffee test/integration/*.coffee"
+    "lint": "bin-up coffeelint test/*.coffee test/unit/*.coffee test/integration/*.coffee",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "files": [
     "config",
@@ -80,7 +82,7 @@
     "xvfb-maybe": "cypress-io/xvfb-maybe#c4a810c42d603949cd63b8cf245f6c239331d370"
   },
   "dependencies": {
-    "@cypress/browserify-preprocessor": "1.1.0",
+    "@cypress/browserify-preprocessor": "2.1.1",
     "@cypress/commit-info": "2.0.0",
     "@cypress/icons": "0.5.4",
     "@cypress/mocha-teamcity-reporter": "^1.0.0",
@@ -91,7 +93,7 @@
     "chai": "^1.9.2",
     "chalk": "^2.4.1",
     "check-more-types": "^2.24.0",
-    "chokidar": "1.6.0",
+    "chokidar": "2.0.0",
     "cjsxify": "^0.3.0",
     "clear-module": "^2.1.0",
     "cli-table2": "^0.2.0",
@@ -117,7 +119,7 @@
     "glob": "7.1.2",
     "graceful-fs": "^4.1.11",
     "gulp-util": "^3.0.6",
-    "hbs": "4.0.0",
+    "hbs": "4.0.2",
     "http-accept": "^0.1.6",
     "http-proxy": "1.17.0",
     "http-status-codes": "^1.0.6",
@@ -129,14 +131,14 @@
     "konfig": "^0.2.0",
     "lazy-ass": "^1.6.0",
     "lockfile": "^1.0.3",
-    "lodash": "4.17.4",
+    "lodash": "4.17.21",
     "log-symbols": "^2.2.0",
     "md5": "^2.2.1",
     "method-override": "^2.3.1",
     "mime": "1.2.11",
     "minimatch": "^3.0.0",
     "minimist": "^1.1.2",
-    "mocha": "2.4.5",
+    "mocha": "4.0.0",
     "mocha-junit-reporter": "1.17.0",
     "moment": "^2.14.1",
     "morgan": "1.3.0",
@@ -158,7 +160,7 @@
     "return-deep-diff": "^0.2.9",
     "sanitize-filename": "^1.6.1",
     "semver": "^5.3.0",
-    "send": "^0.14.1",
+    "send": "^0.15.6",
     "server-destroy": "1.0.1",
     "shell-env": "^0.3.0",
     "signal-exit": "^3.0.2",
@@ -176,6 +178,8 @@
     "underscore.string": "3.3.4",
     "url-parse": "^1.1.7",
     "widest-line": "^2.0.0",
-    "winston": "^0.9.0"
-  }
+    "winston": "^0.9.0",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
