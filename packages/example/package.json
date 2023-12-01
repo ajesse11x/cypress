@@ -20,7 +20,7 @@
   ],
   "dependencies": {
     "bluebird": "^3.5.1",
-    "glob": "^7.1.2"
+    "glob": "^9.0.0"
   },
   "devDependencies": {
     "bin-up": "^1.1.0",
